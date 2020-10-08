@@ -76,6 +76,7 @@
 #include "Kaleidoscope-USB-Quirks.h"
 
 #include "Kaleidoscope-OneShot.h"
+/* #include "Kaleidoscope-Escape-OneShot.h" */
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
   * The names aren't particularly important. What is important is that each
@@ -192,7 +193,7 @@ KEYMAPS(
                    Key_D, Key_H, Key_T, Key_N, Key_S, Key_Minus,
    Key_RightAlt,   Key_B, Key_M, Key_W, Key_V, Key_Z, Key_Equals,
    Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
-   ShiftToLayer(FUNCTION)),
+   OSL(NUMPAD)),
 
 #elif defined (PRIMARY_KEYMAP_CUSTOM)
   // Edit this keymap to make a custom layout
@@ -209,7 +210,7 @@ KEYMAPS(
                   Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
    Key_Enter,     Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
    Key_RightShift, Key_RightAlt, Key_Spacebar, Key_RightControl,
-   OSL(NUMPAD)),
+   OSL(FUNCTION)),
 
 #else
 
@@ -525,7 +526,8 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // by BIOSes) and Report (NKRO).
   USBQuirks,
 
-  OneShot
+  OneShot,
+  /* EscapeOneShot, */
 );
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
