@@ -234,7 +234,7 @@ KEYMAPS(
    Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,
    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
-   Key_LeftControl, Key_Backspace, M(MACRO_CUSTOM_MOD_KEY), Key_LeftShift,
+   OSM(LeftControl), Key_Backspace, M(MACRO_CUSTOM_MOD_KEY), Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
    M(MACRO_ANY),  Key_6, Key_7, Key_8,     Key_9,         Key_0,         M(MACRO_SWITCH_MAC_MODE),
@@ -555,7 +555,9 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // comfortable - or able - to do automatically, but can be useful
   // nevertheless. Such as toggling the key report protocol between Boot (used
   // by BIOSes) and Report (NKRO).
-  USBQuirks
+  USBQuirks,
+
+  OneShot
 );
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
