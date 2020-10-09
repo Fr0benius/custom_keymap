@@ -76,7 +76,7 @@
 #include "Kaleidoscope-USB-Quirks.h"
 
 #include "Kaleidoscope-OneShot.h"
-/* #include "Kaleidoscope-Escape-OneShot.h" */
+#include "Kaleidoscope-Escape-OneShot.h"
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
   * The names aren't particularly important. What is important is that each
@@ -176,6 +176,16 @@ enum { PRIMARY, NUMPAD, FUNCTION }; // layers
  */
 // *INDENT-OFF*
 
+// To use QWERTY hardware with Dvorak software, we have to flip some signs
+#define DV_LeftBr Key_Minus
+#define DV_RightBr Key_Equals
+#define DV_Slash Key_LeftBracket
+#define DV_Equals Key_RightBracket
+
+#define DV_LeftCBr LSHIFT(Key_Minus)
+#define DV_RightCBr LSHIFT(Key_Equals)
+#define DV_Ques Key_LeftCurlyBracket
+#define DV_Plus Key_RightCurlyBracket
 KEYMAPS(
 
 #if defined (PRIMARY_KEYMAP_DVORAK)
@@ -193,7 +203,7 @@ KEYMAPS(
                    Key_D, Key_H, Key_T, Key_N, Key_S, Key_Minus,
    Key_RightAlt,   Key_B, Key_M, Key_W, Key_V, Key_Z, Key_Equals,
    Key_RightShift, Key_LeftAlt, Key_Spacebar, Key_RightControl,
-   OSL(NUMPAD)),
+   ShiftToLayer(FUNCTION)),
 
 #elif defined (PRIMARY_KEYMAP_CUSTOM)
   // Edit this keymap to make a custom layout
@@ -203,7 +213,7 @@ KEYMAPS(
    Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G,
    Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
    OSM(LeftControl), Key_Backspace, OSM(LeftGui), Key_LeftShift,
-   ShiftToLayer(FUNCTION),
+   OSL(NUMPAD),
 
    M(MACRO_ANY),  Key_6, Key_7, Key_8,     Key_9,         Key_0,         M(MACRO_SWITCH_MAC_MODE),
    Key_LeftGui,  Key_Y, Key_U, Key_I,     Key_O,          Key_P,         Key_Equals,
@@ -222,9 +232,9 @@ KEYMAPS(
 
   [NUMPAD] =  KEYMAP_STACKED
   (___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, ___, ___, ___, ___,
+   ___, ___, ___, Key_UpArrow, Key_LeftParen, Key_RightParen, ___,
+   ___, ___, Key_LeftArrow, Key_DownArrow, Key_RightArrow, ___,
+   ___, DV_LeftCBr, DV_RightCBr, DV_LeftBr, DV_RightBr, ___, ___,
    ___, ___, ___, ___,
    ___,
 
@@ -527,7 +537,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   USBQuirks,
 
   OneShot,
-  /* EscapeOneShot, */
+  EscapeOneShot
 );
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
