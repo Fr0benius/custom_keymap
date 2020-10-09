@@ -232,16 +232,16 @@ KEYMAPS(
 
   [NUMPAD] =  KEYMAP_STACKED
   (___, ___, ___, ___, ___, ___, ___,
-   ___, ___, ___, Key_UpArrow, Key_LeftParen, Key_RightParen, ___,
+   ___, DV_LeftCBr, DV_RightCBr, Key_UpArrow, Key_LeftParen, Key_RightParen, ___,
    ___, ___, Key_LeftArrow, Key_DownArrow, Key_RightArrow, ___,
-   ___, DV_LeftCBr, DV_RightCBr, DV_LeftBr, DV_RightBr, ___, ___,
+   ___, ___, ___, DV_LeftBr, DV_RightBr, ___, ___,
    ___, ___, ___, ___,
    ___,
 
    M(MACRO_VERSION_INFO),  ___, ___, ___,      ___,              ___, ___,
-   ___,                    ___, Key_7, Key_8, Key_9,              Key_0,      ___,
-                           ___, Key_4, Key_5, Key_6,                     ___,         ___,
-   ___,                    ___, Key_1, Key_2, Key_3,              Key_KeypadAdd,      ___,
+   ___,                    Key_KeypadAdd, Key_7, Key_8, Key_9,              Key_0,      ___,
+                           Key_KeypadMultiply, Key_4, Key_5, Key_6,        Key_KeypadSubtract,         ___,
+   ___,                    Key_KeypadDivide, Key_1, Key_2, Key_3,              DV_Equals,      ___,
    /* ___,                    ___, Key_0, Key_Period, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter, */
    ___, ___, ___, ___,
    ___),
@@ -249,14 +249,15 @@ KEYMAPS(
   [FUNCTION] =  KEYMAP_STACKED
   (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           Key_LEDEffectNext,
    Key_Tab,  ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
-   Key_Home, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,
+   Key_Home, LSHIFT(Key_1),       LSHIFT(Key_2), LSHIFT(Key_3), LSHIFT(Key_4), LSHIFT(Key_5),
    Key_End,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
    ___, Key_Delete, ___, ___,
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
-   Key_PcApplication,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
-                               Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  Consumer_VolumeDecrement,Consumer_VolumeIncrement,
+   Consumer_Mute,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_F12,
+
+                         LSHIFT(Key_6),          LSHIFT(Key_7),            LSHIFT(Key_8),            ___,  Consumer_VolumeDecrement,Consumer_VolumeIncrement,
    Key_Enter,          Consumer_Mute,          Key_LeftParen,            Key_RightParen,           Consumer_PlaySlashPause,             Key_Backslash,    Key_Pipe,
    ___, ___, ___, ___,
    ___)
