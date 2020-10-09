@@ -239,9 +239,9 @@ KEYMAPS(
    ___,
 
    M(MACRO_VERSION_INFO),  ___, ___, ___,      ___,              ___, ___,
-   ___,                    Key_KeypadAdd, Key_7, Key_8, Key_9,              Key_0,      ___,
-                           Key_KeypadMultiply, Key_4, Key_5, Key_6,        Key_KeypadSubtract,         ___,
-   ___,                    Key_KeypadDivide, Key_1, Key_2, Key_3,              DV_Equals,      ___,
+   ___,                    Key_KeypadAdd, Key_7, Key_8, Key_9,              Key_0,      Key_Backslash,
+                           Key_KeypadMultiply, Key_4, Key_5, Key_6,        Key_KeypadSubtract,         LSHIFT(DV_Slash),
+   ___,                    Key_KeypadDivide, Key_1, Key_2, Key_3,              DV_Equals,      Key_Pipe,
    /* ___,                    ___, Key_0, Key_Period, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter, */
    ___, ___, ___, ___,
    ___),
