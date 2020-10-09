@@ -95,7 +95,7 @@ enum { MACRO_VERSION_INFO,
        MACRO_ANY,
        MACRO_TURN_LEDS_OFF,
        MACRO_CUSTOM_MOD_KEY,
-       MACRO_SWITCH_MAC_MODE,
+       MACRO_CANCEL_ONESHOT,
      };
 
 
@@ -215,7 +215,7 @@ KEYMAPS(
    OSM(LeftControl), Key_Backspace, OSM(LeftGui), OSM(LeftShift),
    OSL(NUMPAD),
 
-   M(MACRO_ANY),      Key_6, Key_7, Key_8,     Key_9,         Key_0,         M(MACRO_SWITCH_MAC_MODE),
+   M(MACRO_ANY),      Key_6, Key_7, Key_8,     Key_9,         Key_0,         M(MACRO_CANCEL_ONESHOT),
    OSM(LeftGui),      Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
                       Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
    Key_Enter,         Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
@@ -248,9 +248,9 @@ KEYMAPS(
 
   [FUNCTION] =  KEYMAP_STACKED
   (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           Key_LEDEffectNext,
-   Key_Tab,  ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
+   ___, DV_LeftCBr, DV_RightCBr, Key_UpArrow, Key_LeftParen, Key_RightParen, ___,
    Key_Home, LSHIFT(Key_1),       LSHIFT(Key_2), LSHIFT(Key_3), LSHIFT(Key_4), LSHIFT(Key_5),
-   Key_End,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
+   Key_End,  Key_PrintScreen,  Key_Insert, DV_LeftBr,  DV_RightBr, Key_mouseWarpSW,  Key_mouseWarpSE,
    ___, Key_Delete, ___, ___,
    ___,
 
@@ -295,10 +295,8 @@ static void customModKeyMacro(uint8_t keyState) {
   }
 }
 
-static void switchMacModeMacro(uint8_t keyState) {
-  if(keyToggledOn(keyState)){
-    mac_mode = !mac_mode;
-  }
+static void CancelOneShot(uint8_t keyState) {
+  OneShot.cancel(true);
 }
 
 /** anyKeyMacro is used to provide the functionality of the 'Any' key.
@@ -349,8 +347,8 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
     turnLEDsOffMacro(keyState);
     break;
 
-  case MACRO_SWITCH_MAC_MODE:
-    switchMacModeMacro(keyState);
+  case MACRO_CANCEL_ONESHOT:
+    CancelOneShot(keyState);
     break;
 
   case MACRO_CUSTOM_MOD_KEY:
