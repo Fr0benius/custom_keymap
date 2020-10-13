@@ -77,6 +77,7 @@
 
 #include "Kaleidoscope-OneShot.h"
 #include "Kaleidoscope-Escape-OneShot.h"
+#include <Kaleidoscope-LED-ActiveModColor.h>
 
 /** This 'enum' is a list of all the macros used by the Model 01's firmware
   * The names aren't particularly important. What is important is that each
@@ -510,10 +511,6 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // The Colormap effect makes it possible to set up per-layer colormaps
   ColormapEffect,
 
-  // The numpad plugin is responsible for lighting up the 'numpad' mode
-  // with a custom LED effect
-  NumPad,
-
   // The macros plugin adds support for macros
   Macros,
 
@@ -536,7 +533,8 @@ KALEIDOSCOPE_INIT_PLUGINS(
   USBQuirks,
 
   OneShot,
-  EscapeOneShot
+  EscapeOneShot,
+  ActiveModColorEffect
 );
 
 /** The 'setup' function is one of the two standard Arduino sketch functions.
