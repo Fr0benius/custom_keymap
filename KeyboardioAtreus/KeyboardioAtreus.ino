@@ -64,12 +64,12 @@ KEYMAPS(
        Key_Quote ,Key_Comma   ,Key_Period       ,Key_P         ,Key_Y
       ,Key_A     ,Key_O   ,Key_E       ,Key_U         ,Key_I
       ,Key_Semicolon     ,Key_Q   ,Key_J       ,Key_K         ,Key_X, Key_Backtick
-      ,Key_Esc   ,Key_Tab ,Key_LeftGui ,Key_LeftControl ,Key_Backspace ,Key_LeftShift
+      ,Key_Esc   ,Key_Tab ,Key_LeftGui ,Key_LeftControl ,Key_Backspace ,MO(FUN)
 
                      ,Key_F     ,Key_G      ,Key_C     ,Key_R      ,Key_L
                      ,Key_D     ,Key_H      ,Key_T     ,Key_N      ,Key_S
        ,Key_Backslash,Key_B     ,Key_M      ,Key_W     ,Key_V      ,Key_Z
-       ,MO(FUN)  ,Key_Space ,Key_LeftAlt    ,Key_Minus ,Key_Slash  ,Key_Enter
+       ,Key_LeftShift  ,Key_Space ,Key_LeftAlt    ,Key_Minus ,Key_Slash  ,Key_Enter
   ),
 
   [FUN] = KEYMAP_STACKED
@@ -77,12 +77,12 @@ KEYMAPS(
        Key_Exclamation ,Key_At           ,Key_UpArrow   ,Key_Dollar           ,Key_Percent
       ,Key_LeftParen   ,Key_LeftArrow    ,Key_DownArrow ,Key_RightArrow       ,Key_RightParen
       ,Key_LeftBracket ,Key_RightBracket ,Key_Hash      ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_Caret
-      ,TG(UPPER)       ,Key_Insert       ,Key_LeftGui   ,Key_LeftControl        ,Key_Delete         ,Key_LeftShift
+      ,TG(UPPER)       ,Key_Insert       ,Key_LeftGui   ,Key_LeftControl        ,Key_Delete         ,___
 
-                   ,Key_PageUp   ,Key_7 ,Key_8      ,Key_9 ,Key_Backspace
+                   ,Key_PageUp   ,Key_7 ,Key_8      ,Key_9 ,Key_0
                    ,Key_PageDown ,Key_4 ,Key_5      ,Key_6 ,Key_Minus
       ,Key_And     ,Key_Star     ,Key_1 ,Key_2      ,Key_3 ,Key_Plus
-      ,___  ,Key_Space    ,Key_LeftAlt  ,Key_Period ,Key_0 ,Key_Equals
+      ,Key_LeftShift  ,Key_Space    ,Key_LeftAlt  ,Key_Period ,Key_0 ,Key_Equals
    ),
 
   [UPPER] = KEYMAP_STACKED
