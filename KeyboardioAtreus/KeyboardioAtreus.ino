@@ -65,7 +65,7 @@ KEYMAPS(
        Key_Quote ,Key_Comma   ,Key_Period       ,Key_P         ,Key_Y
       ,Key_A     ,Key_O   ,Key_E       ,Key_U         ,Key_I
       ,Key_Semicolon     ,Key_Q   ,Key_J       ,Key_K         ,Key_X, Key_Backtick
-      ,Key_Esc   ,Key_Tab ,Key_LeftGui ,Key_LeftControl ,SFT_T(Backspace) ,MO(FUN)
+      ,Key_Esc   ,Key_Tab ,Key_LeftGui ,Key_LeftControl ,LT(FUN,Backspace)  ,Key_LeftShift
 
                      ,Key_F     ,Key_G      ,Key_C     ,Key_R      ,Key_L
                      ,Key_D     ,Key_H      ,Key_T     ,Key_N      ,Key_S
@@ -78,7 +78,7 @@ KEYMAPS(
        Key_Exclamation ,Key_At           ,Key_UpArrow   ,Key_Dollar           ,Key_Percent
       ,Key_LeftParen   ,Key_LeftArrow    ,Key_DownArrow ,Key_RightArrow       ,Key_RightParen
       ,Key_LeftBracket ,Key_RightBracket ,Key_Hash      ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_Caret
-      ,TG(UPPER)       ,Key_Insert       ,Key_LeftGui   ,Key_LeftControl        ,SFT_T(Delete)         ,___
+      ,TG(UPPER)       ,Key_Insert       ,Key_LeftGui   ,Key_LeftControl        ,Key_Delete         ,Key_LeftShift
 
                    ,Key_PageUp   ,Key_7 ,Key_8      ,Key_9 ,Key_0
                    ,Key_PageDown ,Key_4 ,Key_5      ,Key_6 ,Key_Minus
@@ -139,6 +139,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 void setup() {
   Kaleidoscope.setup();
   SpaceCadet.disable();
+  Qukeys.setOverlapThreshold(100);
   EEPROMKeymap.setup(10);
 }
 
