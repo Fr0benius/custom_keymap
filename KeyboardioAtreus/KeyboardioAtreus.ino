@@ -70,7 +70,7 @@ KEYMAPS(
                      ,Key_F     ,Key_G      ,Key_C     ,Key_R      ,Key_L
                      ,Key_D     ,Key_H      ,Key_T     ,Key_N      ,Key_S
        ,Key_Enter,Key_B     ,Key_M      ,Key_W     ,Key_V      ,Key_Z
-       ,Key_LeftShift  ,LT(FUN,Backspace) ,Key_LeftAlt    ,Key_Minus ,Key_Slash  ,Key_Backslash
+       ,Key_LeftShift  ,LT(FUN,Backspace) ,Key_LeftAlt    ,GUI_T(Minus) ,Key_Slash  ,CTL_T(Backslash)
   ),
 
   [FUN] = KEYMAP_STACKED
@@ -78,12 +78,12 @@ KEYMAPS(
        Key_Exclamation ,Key_At           ,Key_UpArrow   ,Key_Dollar           ,Key_Percent
       ,Key_LeftParen   ,Key_LeftArrow    ,Key_DownArrow ,Key_RightArrow       ,Key_RightParen
       ,Key_LeftBracket ,Key_RightBracket ,Key_Hash      ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_Caret
-      ,TG(UPPER)       ,Key_Insert       ,Key_LeftGui   ,Key_LeftControl        ,Key_Space         ,Key_LeftShift
+      ,TG(UPPER)       ,Key_Insert       ,___   ,___        ,Key_Space         ,Key_LeftShift
 
                    ,Key_PageUp   ,Key_7 ,Key_8      ,Key_9 ,Key_0
                    ,Key_PageDown ,Key_4 ,Key_5      ,Key_6 ,Key_Minus
       ,Key_Equals     ,Key_Star     ,Key_1 ,Key_2      ,Key_3 ,Key_Plus
-      ,Key_LeftShift  ,Key_Delete    ,Key_LeftAlt  ,Key_Underscore ,Key_Period ,Key_And
+      ,Key_LeftShift  ,Key_Delete    ,___  ,GUI_T(Underscore) ,Key_Period ,CTL_T(And)
    ),
 
   [UPPER] = KEYMAP_STACKED
