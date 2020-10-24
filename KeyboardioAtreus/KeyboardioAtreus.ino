@@ -81,9 +81,9 @@ KEYMAPS(
       ,Key_LeftBracket ,Key_RightBracket ,Key_Hash      ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_Caret
       ,TG(UPPER)       ,Key_Insert       ,___   ,___        ,Key_Space         ,Key_LeftShift
 
-      ,Key_Question   ,Key_7 ,Key_8      ,Key_9 ,Key_0
+      ,Key_Equals   ,Key_7 ,Key_8      ,Key_9 ,Key_0
       ,Key_Underscore ,Key_4 ,Key_5      ,Key_6 ,Key_Minus
-      ,Key_Equals     ,Key_Star     ,Key_1 ,Key_2      ,Key_3 ,Key_Plus
+      ,Key_Question     ,Key_Star     ,Key_1 ,Key_2      ,Key_3 ,Key_Plus
       ,Key_LeftShift  ,Key_Delete    ,___  ,GUI_T(Underscore) ,Key_Period ,Key_And
    ),
 
