@@ -84,7 +84,7 @@ KEYMAPS(
       ,Key_Equals   ,Key_7 ,Key_8      ,Key_9 ,Key_0
       ,Key_Underscore ,Key_4 ,Key_5      ,Key_6 ,Key_Minus
       ,Key_Question     ,Key_Star     ,Key_1 ,Key_2      ,Key_3 ,Key_Plus
-      ,Key_LeftShift  ,Key_Delete    ,___  ,GUI_T(Underscore) ,Key_Period ,Key_And
+      ,Key_LeftShift  ,Key_Delete    ,___  ,GUI_T(Comma) ,Key_Period ,Key_And
    ),
 
   [UPPER] = KEYMAP_STACKED
