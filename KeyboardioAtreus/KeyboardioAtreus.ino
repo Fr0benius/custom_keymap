@@ -63,15 +63,15 @@ enum {
 KEYMAPS(
   [DVORAK] = KEYMAP_STACKED
   (
-       Key_Quote       ,Key_Comma     ,Key_Period  ,Key_P   ,Key_Y
-      ,Key_A           ,Key_O         ,Key_E       ,Key_U   ,Key_I
-      ,Key_Semicolon   ,Key_Q         ,Key_J       ,Key_K   ,Key_X      ,Key_Tab
-      ,CTL_T(Esc)      ,Key_Backtick  ,Key_LeftGui ,MO(FUN) ,Key_Space  ,Key_LeftShift
+       Key_Quote       ,Key_Comma     ,Key_Period  ,Key_P       ,Key_Y
+      ,Key_A           ,Key_O         ,Key_E       ,Key_U       ,Key_I
+      ,Key_Semicolon   ,Key_Q         ,Key_J       ,Key_K       ,Key_X   ,Key_Tab
+      ,CTL_T(Esc)      ,Key_Backtick  ,Key_LeftGui ,Key_Space   ,MO(FUN) ,Key_LeftShift
 
-                      ,Key_F         ,Key_G     ,Key_C        ,Key_R      ,Key_L
-                      ,Key_D         ,Key_H     ,Key_T        ,Key_N      ,Key_S
-       ,Key_Enter     ,Key_B         ,Key_M     ,Key_W        ,Key_V      ,Key_Z
-       ,Key_LeftShift ,Key_Backspace ,MO(FUN)   ,ALT_T(Minus) ,Key_Slash  ,CTL_T(Backslash)
+                      ,Key_F     ,Key_G         ,Key_C        ,Key_R      ,Key_L
+                      ,Key_D     ,Key_H         ,Key_T        ,Key_N      ,Key_S
+       ,Key_Enter     ,Key_B     ,Key_M         ,Key_W        ,Key_V      ,Key_Z
+       ,Key_LeftShift ,MO(FUN)   ,Key_Backspace ,ALT_T(Minus) ,Key_Slash  ,CTL_T(Backslash)
   ),
 
   [FUN] = KEYMAP_STACKED
@@ -79,12 +79,12 @@ KEYMAPS(
        Key_Exclamation ,Key_At           ,Key_UpArrow   ,Key_Dollar           ,Key_Percent
       ,Key_LeftParen   ,Key_LeftArrow    ,Key_DownArrow ,Key_RightArrow       ,Key_RightParen
       ,Key_LeftBracket ,Key_RightBracket ,Key_Hash      ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_Caret
-      ,___             ,Key_Insert       ,TG(UPPER)     ,___                  ,Key_Space             ,Key_LeftShift
+      ,___             ,___              ,___           ,Key_Space            ,TG(UPPER)             ,Key_LeftShift
 
-                     ,Key_Equals     ,Key_7 ,Key_8        ,Key_9      ,Key_0
-                     ,Key_Underscore ,Key_4 ,Key_5        ,Key_6      ,Key_Minus
-      ,Key_Question  ,Key_Star       ,Key_1 ,Key_2        ,Key_3      ,Key_Plus
-      ,Key_LeftShift ,Key_Delete     ,TG(UPPER)           ,GUI_T(Comma) ,Key_Period ,Key_And
+                     ,Key_Equals     ,Key_7       ,Key_8        ,Key_9      ,Key_0
+                     ,Key_Underscore ,Key_4       ,Key_5        ,Key_6      ,Key_Minus
+      ,Key_Question  ,Key_Star       ,Key_1       ,Key_2        ,Key_3      ,Key_Plus
+      ,Key_LeftShift ,TG(UPPER)      ,Key_Delete  ,ALT_T(Comma) ,Key_Period ,Key_And
    ),
 
   [UPPER] = KEYMAP_STACKED
